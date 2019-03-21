@@ -1,13 +1,13 @@
 ---
 layout:     post
-title:      Java后台接口开发
+title:      SpringBoot入门
 subtitle:   从零开始写接口
 date:       2018-09-21
 author:     Edward
 header-img: img/post-bg-coffee.jpeg
 ---
-
-笔者是做Android的，没有后端经验，搜索了大量资料并尝试后，终于运行起来了接口服务，并用postman测试通过。
+本人并不是做后台开发的，没有后端经验，在搜索了大量资料并尝试后，终于运行起来了接口服务，并用postman测试通过。
+本文就是利用SpringBoot框架以及相关开发工具，以生手的方式记录实践过程。
 
 ### 一、环境搭建
 
