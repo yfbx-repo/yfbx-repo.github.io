@@ -17,12 +17,12 @@ JDK安装以及环境变量配置,这个没什么好说的，都会，网上也�
 开发工具，这个也没什么好说的
 #### 安装 [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
 
-1. 下载完成后，解压zip包到合适的安装目录 如：D:\mysql-8.0.12
-2. 在该文件夹下创建 my.ini 配置文件，编辑 my.ini 配置以下基本信息：
+1. 安装配置         
+   下载完成后，解压zip包到合适的安装目录 如：D:\mysql-8.0.12,在该文件夹下创建 my.ini 配置文件，编辑 my.ini 配置以下基本信息：    
 ```
 [mysql]
 default-character-set=utf8
-[mysql]
+[mysqld]
 port = 3306
 basedir=C:\web\mysql-8.0.11
 datadir=C:\web\sqldata
@@ -30,20 +30,27 @@ max_connections=20
 character-set-server=utf8
 default-storage-engine=INNODB
 ```
-3. 以管理员身份打开 cmd 命令行工具，切换目录：cd D:\mysql-8.0.12,也可以将该目录添加到环境变量中
-4. 初始化数据库
+2. 初始化数据库     
+   以管理员身份打开 cmd 命令行工具，切换目录：cd D:\mysql-8.0.12,也可以将该目录添加到环境变量中,执行以下命令，进行初始化：
 ```
 mysqld --initialize --console
 //执行完成后，会输出 root 用户的初始默认密码 root@localhost: APWCY5ws&hjQ
 ... A temporary password is generated for root@localhost: APWCY5ws&hjQ
 ```
-5.安装，启动
+3. 安装并启动
 ```
+//安装
 mysqld install
 //启动
 net start mysql
-//停止
-net stop mysql
+```
+4. 登录并设置密码
+```
+//登录
+mysql -u root -p
+//修改密码
+mysql> set password = '123456';
+//
 ```
 可以使用[MySQL Workbench](https://dev.mysql.com/downloads/workbench/) 或 [Navicat](https://www.navicat.com.cn/)
 等数据库可视化工具进行数据库管理，具体使用方法可自行搜索。IntelliJ IDEA 自带一个简单的数据库可视化管理工具。
