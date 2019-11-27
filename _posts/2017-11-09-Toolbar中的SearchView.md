@@ -1,7 +1,7 @@
 在 [Toolbar与menu结合使用总结](http://www.jianshu.com/p/fcb0a163fffc) 这篇文中了解了Toolbar中menu的使用，本文中的SearchView也属于menu的使用，但又有一点不同，所以单独记下来。
 
 - 首先还是创建menu:
-search.xml
+search.xml    
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
