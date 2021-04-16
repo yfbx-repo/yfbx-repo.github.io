@@ -1,0 +1,89 @@
+# 官方教程地址：[https://git-scm.com/book/zh/v2](https://git-scm.com/book/zh/v2)
+
+## 基本使用
+
+查看当前状态
+```
+> git status
+``` 
+添加所有更改的文件到暂存区
+```
+> git add -A
+```
+提交到本地仓库
+```
+> git commit -m "提交日志"
+```
+拉取远程代码
+```
+> git pull
+```
+ 提交到远程仓库
+```
+> git push
+```
+
+
+## 分支操作
+切换分支
+```
+> git checkout <branch name>
+```
+新建分支并切换到新分支
+```
+> git checkout -b <branch name>
+```
+删除本地分支
+```
+> git branch -d <branch name>
+```
+删除远程分支
+```
+> git push origin --delete <branch name>
+```
+修改本地分支名
+```
+git branch -m <old name> <new name>
+```
+
+**分支合并**    
+> 1. 例：将dev分支合并到master分支       
+> 2. 切换到master分支    
+> 3. 执行`git pull origin dev`    
+> 4. 若有冲突解决冲突,提交   
+
+一般合并分支用`git merge`命令，但没必要记那么多，直接用`git pull` 命令将要合并的分支拉到当前分支会自动进行`merge`操作    
+
+## 仓库操作
+查看远程仓库地址
+```
+> git remote -v
+```
+添加关联多个远程仓库    
+
+```
+> git remote add <仓库名> <仓库地址>
+> git remote add origin https://xxx.com/name/project.git
+> git remote add gitee https://gitee.com/name/project.git
+> git remote add github https://github.com/name/project.git
+```
+> 1. 添加多个远程仓库时，仓库名不能相同，一般第一个仓库默认`origin`,添加其他仓库时，注意使用不同的名称,如上面例子中 `origin`,`gitee`,`github`，名称可任意自取
+> 2. 有多个远程仓库时，`pull`和 `push` 操作需要指定仓库名，不指定时默认`origin`仓库
+
+移除远程仓库关联
+```
+> git remote remove <仓库名>
+```
+重命名远程仓库
+```
+> git remote rename <old name> <new name>
+```
+
+
+## Cache
+- **已添加到`.gitignore`文件中，但依然显示有修改，文件未被忽略。**    
+`gitignore`只能忽略未被`track`的文件,若之前已经提交过，再ignore则不起作用。    
+解决方法：
+```
+git update-index --assume-unchanged <要被忽略的文件>
+```
