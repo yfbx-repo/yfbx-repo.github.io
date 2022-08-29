@@ -4,13 +4,13 @@
    2. 需要安装python
 
 ## 一、环境配置
-    1. 安装![frida](https://github.com/frida/frida)
+    1. 安装[frida](https://github.com/frida/frida)
     ```
     pip install frida-tools
     pip install frida
     ```
     
-    2. 安装![frida-server](https://github.com/frida/frida/releases/tag/15.2.2)
+    2. 安装[frida-server](https://github.com/frida/frida/releases/tag/15.2.2)
     根据frida和手机cpu版本，下载对应的![frida-server](https://github.com/frida/frida/releases/tag/15.2.2)
     ```
     //查看 frida 版本
@@ -29,7 +29,7 @@
     chmod 777 frida-server
     ```
     
-    3. 安装![Camille](https://github.com/zhengjim/camille)
+    3. 安装[Camille](https://github.com/zhengjim/camille)
     ```
     git clone https://github.com/zhengjim/camille.git
     cd camille
