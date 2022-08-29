@@ -1,7 +1,10 @@
+# 笔记
+
+## 访问地址
 [https://yfbx-repo.github.io/](https://yfbx-repo.github.io/)
 
 
-
+## 目录
 [2022-08-29 隐私合规检测工具Camille使用](https://yfbx-repo.github.io/2022/08/29/隐私合规检测工具Camille使用/)    
 [2021-09-24 Mac环境搭建私有Maven库](https://yfbx-repo.github.io/2021/09/24/Mac环境搭建私有Maven库/)    
 [2021-08-19 Linux配置](https://yfbx-repo.github.io/2021/08/19/Linux配置/)    
